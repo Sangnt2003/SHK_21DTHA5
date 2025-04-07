@@ -1,2 +1,4 @@
 tạo file với tên loading.tsx trong app sẽ thực hiện streaming cho toàn bộ layout đó
 chứ không streaming riêng cho bất kỳ phần nào (phải tạo file với tên khác)
+
+hahahaahhaahahah
