@@ -1,0 +1,7 @@
+
+npm install next@latest react@latest react-dom@latest mongodb
+
+npm install -D tailwindcss @tailwindcss/postcss postcss
+npm i bootstrap@5.3.3
+
+npm install --save-dev sass

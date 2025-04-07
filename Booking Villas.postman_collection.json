@@ -1,0 +1,317 @@
+{
+	"info": {
+		"_postman_id": "ececfa3b-27b6-4465-97e8-dad92e34d78b",
+		"name": "Booking Villas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "40076308"
+	},
+	"item": [
+		{
+			"name": "villas",
+			"item": [
+				{
+					"name": "find all villas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/villas"
+					},
+					"response": []
+				},
+				{
+					"name": "create new villa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Hau Villa Tiền Giang Gradent 32\",\n    \"location\": \"Tân Hương, Tiền Giang\",\n    \"images\":[\n        \"123123\", \"12313\", \"123123\"\n    ],\n    \"comments\": [\n        \"Good\", \"Bad\"\n    ],\n    \"category\":\"67e7be49aadba911d821d718\",\n    \"description\": \"lorem\",\n    \"phoneNumber\": \"09324234234\",\n    \"email\": \"tansanglocac343@gmail.com\",\n    \"available\":true,\n    \"numberOfRooms\": 3,\n    \"acreage\": 300,\n    \"pool\":false,\n    \"price\": 30000,\n    \"maxPeople\":10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/villas"
+					},
+					"response": []
+				},
+				{
+					"name": "find villa by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/villas/67e7bb6eaadba911d821d717"
+					},
+					"response": []
+				},
+				{
+					"name": "update villa",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Tấn Sang Villa Tiền Giang Gradent\",\n    \"location\": \"Tân Hương, Tiền Giang\",\n    \"images\":[\n        \"123123\", \"12313\", \"123123\"\n    ],\n    \"comments\": [\n        \"Good\", \"Bad\", \"Như con cặc\"\n    ],\n    \"categories\":\"67e7be49aadba911d821d718\",\n    \"description\": \"lorem\",\n    \"phoneNumber\": \"09324234234\",\n    \"email\": \"tansanglocac343@gmail.com\",\n    \"available\":true,\n    \"numberOfRooms\": 3,\n    \"acreage\": 300,\n    \"pool\":false,\n    \"price\": 30000,\n    \"maxPeople\":10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/villas/67e7bb6eaadba911d821d717"
+					},
+					"response": []
+				},
+				{
+					"name": "delete villa",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3000/api/villas/67e7d4cdaadba911d821d720"
+					},
+					"response": []
+				},
+				{
+					"name": "find villa by category id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/villas/category/67e7d8d4aadba911d821d724"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "find all categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/categories"
+					},
+					"response": []
+				},
+				{
+					"name": "create new category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imh1eW5odmFuY2hpa2hhbkBnbWFpbC5jb20iLCJpYXQiOjE3NDMzNDMxOTgsImV4cCI6MTc0MzM0Njc5OH0.dXoH4sGF0CdPbE6YCeCnqpj40q_jboZyR1J-nlQfh0s"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Căn hộ giá rẻ test\",\n    \"description\": \"Căn hộ\",\n    \"isVisible\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/categories"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "authentications",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"huynhvanchikhan@gmail.com\",\n    \"password\": \"chikhan\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/authentications/login"
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullName\": \"Huỳnh Văn Chí Khan\",\n    \"email\": \"huynhvanchikhan@gmail.com\",\n    \"password\":\"chikhan\",\n    \"cin\": \"123123123\",\n    \"phoneNumber\": \"0961800341\",\n    \"dateOfBirth\": \"1990-05-20T00:00:00.000Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/authentications/register"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "bookings",
+			"item": [
+				{
+					"name": "create booking",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imh1eW5odmFuY2hpa2hhbkBnbWFpbC5jb20iLCJpYXQiOjE3NDMzNTE2MDksImV4cCI6MTc0MzM1NTIwOX0.i593rGUAom6exABigvnkb-_Q1nF3RH2x6tKNyZrHmjo"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "// {\n//   \"villa\": \"67e7d9b65585096c5c073372\",\n//   \"checkInDate\": \"2023-09-01T00:00:00.000Z\",\n//   \"checkOutDate\": \"2023-09-05T00:00:00.000Z\",\n//   \"totalPrice\": 1500,\n//   \"numberOfPeople\": 4,\n//   \"paymentMethod\": \"direct\",\n//   \"orderInfo\": \"Thanh toán đặt villa trực tiếp\"\n// }\n\n{\n  \"villa\": \"67e7d9b65585096c5c073372\",\n  \"checkInDate\": \"2023-09-01T00:00:00.000Z\",\n  \"checkOutDate\": \"2023-09-05T00:00:00.000Z\",\n  \"totalPrice\": 150000,\n  \"numberOfPeople\": 4,\n  \"paymentMethod\": \"vnpay\",\n  \"orderInfo\": \"Thanh toán đặt villa qua VNPay\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/booking"
+					},
+					"response": []
+				},
+				{
+					"name": "update booking",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imh1eW5odmFuY2hpa2hhbkBnbWFpbC5jb20iLCJpYXQiOjE3NDMzNTE2MDksImV4cCI6MTc0MzM1NTIwOX0.i593rGUAom6exABigvnkb-_Q1nF3RH2x6tKNyZrHmjo"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"villa\": \"67e7d9b65585096c5c073372\",\n  \"checkInDate\": \"2023-09-01T00:00:00.000Z\",\n  \"checkOutDate\": \"2023-09-05T00:00:00.000Z\",\n  \"totalPrice\": 250000,\n  \"numberOfPeople\": 4,\n  \"paymentMethod\": \"vnpay\",\n  \"orderInfo\": \"Thanh toán đặt villa qua VNPay\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/booking/67e97148d51dab1f814725d3"
+					},
+					"response": []
+				},
+				{
+					"name": "cancel booking",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imh1eW5odmFuY2hpa2hhbkBnbWFpbC5jb20iLCJpYXQiOjE3NDMzNTE2MDksImV4cCI6MTc0MzM1NTIwOX0.i593rGUAom6exABigvnkb-_Q1nF3RH2x6tKNyZrHmjo"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/booking/cancel/67e97148d51dab1f814725d3"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "manager",
+			"item": [
+				{
+					"name": "booking",
+					"item": [
+						{
+							"name": "villa",
+							"item": [
+								{
+									"name": "find booking by villa id",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imh1eW5odmFuY2hpa2hhbkBnbWFpbC5jb20iLCJpYXQiOjE3NDMzNTE2MDksImV4cCI6MTc0MzM1NTIwOX0.i593rGUAom6exABigvnkb-_Q1nF3RH2x6tKNyZrHmjo"
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": "http://localhost:3000/api/manager/bookings/villa/67e7d9b65585096c5c073372"
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "find all bookings",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imh1eW5odmFuY2hpa2hhbkBnbWFpbC5jb20iLCJpYXQiOjE3NDMzNTE2MDksImV4cCI6MTc0MzM1NTIwOX0.i593rGUAom6exABigvnkb-_Q1nF3RH2x6tKNyZrHmjo"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3000/api/manager/bookings"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "get user profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imh1eW5odmFuY2hpa2hhbkBnbWFpbC5jb20iLCJpYXQiOjE3NDMzNDMxOTgsImV4cCI6MTc0MzM0Njc5OH0.dXoH4sGF0CdPbE6YCeCnqpj40q_jboZyR1J-nlQfh0s"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/authentications"
+					},
+					"response": []
+				},
+				{
+					"name": "get booking history",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imh1eW5odmFuY2hpa2hhbkBnbWFpbC5jb20iLCJpYXQiOjE3NDMzNTUyMjEsImV4cCI6MTc0MzM1ODgyMX0.ug80AjsvkDAYgMTroCtNFRdxozUr3IeT-oUg3jBhfNQ"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/booking/user/67e94a2fe616ff1432abb58c"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
